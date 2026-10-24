@@ -2,6 +2,8 @@
 
 The portfolio of **Angelo Rosa, Product Designer**, built as a platformer you can play.
 
+**Play it:** https://foxbit.github.io/ui-portfolio-game-experience/
+
 The page *is* the level: paragraphs, cards, titles and images become platforms, every section is a stage
 with a hole in its floor leading to the next one, and the camera is the page scroll. Jump on a pipe and
 press ↓ to open a case study. Prefer to just read? Scroll as usual; the game is a layer on top of a regular site.
