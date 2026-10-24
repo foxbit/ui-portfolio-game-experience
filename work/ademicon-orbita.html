@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ademicon Orbita · Angelo Rosa</title>
+<meta name="description" content="Orbita, a CRM that turns a nationwide network&#x27;s dispersed data into institutional memory, proactive alerts and operational decisions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<!-- chegou por um cano: tela preta até o jogo assumir (evita piscar a página no topo) -->
+<script>try{var s=JSON.parse(sessionStorage.getItem('pf-estado'));if(s&&s.viaCano)document.documentElement.classList.add('chegando')}catch(e){}</script>
+</head>
+<body>
+
+<canvas id="jogo" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="../index.html">ANGELO.ROSA</a>
+  <nav class="nav-links">
+    <a href="../index.html#work">← All work</a>
+  </nav>
+  <button class="btn" data-acao="jogar">▶ Play</button>
+</header>
+
+<main id="mundo">
+
+  <section class="fase" data-fase data-nome="Ademicon Orbita">
+    <div class="container">
+      <!-- cano de entrada: é por ele que o personagem chega, e ele leva de volta ao início -->
+      <div class="saida curta" data-plat>
+        <a class="cano" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">Home</span></a>
+      </div>
+      <h1 class="titulo-projeto" data-plat data-pouso data-letras>Ademicon Orbita</h1>
+      <p class="lead" data-plat data-moedas="4">Orbita, a CRM that turns a nationwide network&#x27;s dispersed data into institutional memory, proactive alerts and operational decisions.</p>
+      <ul class="meta" data-plat data-bugs="1">
+        <li><b>Client</b>Ademicon</li>
+        <li><b>Year</b>2026</li>
+        <li><b>Type</b>UI / Product Design</li>
+      </ul>
+      <figure class="cartao midia capa" data-plat><img src="../assets/work/ademicon-orbita/cover.webp" alt="Pixel art scene for the Ademicon: Network Management CRM Product Design case" width="1280" height="720" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Challenge">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Challenge</h2>
+      <p data-plat data-moedas="3">Ademicon&#x27;s network of units, points of sale and consultants lived in spreadsheets, WhatsApp threads, emails and managers&#x27; memory. History vanished whenever a manager changed.</p>
+      <p data-plat data-bugs="1">Risks only surfaced after a complaint or an audit. The product had to help teams spot signals before they became incidents.</p>
+      <figure class="cartao midia" data-plat><video src="../assets/work/ademicon-orbita/kpis.mp4" poster="../assets/work/ademicon-orbita/kpis-poster.webp" width="720" height="398" autoplay muted loop playsinline preload="metadata" aria-label="Animation of Orbita&#x27;s executive dashboard indicators, including revenue, active consultants, average ticket and retention"></video><figcaption>Executive indicators on the dashboard</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Solution">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras data-skill="Claude Code">Solution</h2>
+      <p data-plat data-moedas="3">Building on Leany&#x27;s discovery, I made the person&#x27;s taxpayer ID (CPF) the central entity, consolidating every link, company and point of sale in a single view.</p>
+      <p data-plat data-bugs="1">Orbita has nine modules, from a dashboard with a natural-language summary, KPIs and an alert center, to an accreditation Kanban, a visit logbook, reports, an access matrix and relationship maps.</p>
+      <div class="galeria">
+        <figure class="cartao midia" data-plat><video src="../assets/work/ademicon-orbita/map.mp4" poster="../assets/work/ademicon-orbita/map-poster.webp" width="720" height="700" autoplay muted loop playsinline preload="metadata" aria-label="Animation of Orbita&#x27;s strategic map switching among global, business unit and state views"></video><figcaption>Strategic map by region and business unit</figcaption></figure>
+        <figure class="cartao midia" data-plat><video src="../assets/work/ademicon-orbita/unit.mp4" poster="../assets/work/ademicon-orbita/unit-poster.webp" width="720" height="454" autoplay muted loop playsinline preload="metadata" aria-label="Animation of Orbita&#x27;s Unit page with unit selection and switching between data and infraction tabs"></video><figcaption>A Unit page: the same structure serves Points of Sale</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Impact">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Impact</h2>
+      <p data-plat data-moedas="3">With an agentic design harness, a chain of AI agents with explicit roles where I supervised every handoff, the MVP went from discovery to a working React app in five days.</p>
+      <figure class="cartao midia" data-plat><video src="../assets/work/ademicon-orbita/consultant.mp4" poster="../assets/work/ademicon-orbita/consultant-poster.webp" width="720" height="454" autoplay muted loop playsinline preload="metadata" aria-label="Animation of an Orbita consultant profile with a side list, basic data and sales view"></video><figcaption>A consultant profile, built in the five-day cycle</figcaption></figure>
+      <div class="numeros">
+        <div class="cartao" data-plat data-moedas="2"><strong>5 days</strong><span>from discovery to MVP</span></div>
+        <div class="cartao" data-plat><strong>9</strong><span>product modules</span></div>
+        <div class="cartao" data-plat data-moedas="2"><strong>R$100k</strong><span>initial contract proposal</span></div>
+      </div>
+      <p data-plat data-bugs="1">Approved by the client and contracted for development. In 2026, Orbita won the Innova Ademicon Open Innovation call.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/ademicon-orbita/innova.webp" alt="In-person presentation of the Orbita System to the Innova Ademicon panel, with a dashboard, Brazil map and Unit panel projected on screen" width="800" height="533" loading="lazy" decoding="async"><figcaption>Presenting Orbita to the Innova Ademicon panel</figcaption></figure>
+    </div>
+  </section>
+
+  <footer class="fase rodape" data-fase data-nome="Exit">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>What next?</h2>
+      <p data-plat data-moedas="3">Jump on a pipe to keep exploring, or <a class="externo" href="https://portifolio-arcreator.netlify.app/en/portfolio/ademicon-network-management-crm-product-design" target="_blank" rel="noopener">read the full case ↗</a>.</p>
+    </div>
+    <!-- os canos de saída ficam em cima do chão final: quem cai até o fundo sempre tem por onde sair -->
+    <div class="saida no-chao">
+      <a class="cano fixo" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">← Home</span></a>
+      <a class="cano fixo segundo" href="oab-parana.html" data-plat data-cano aria-label="Next case: OAB Paraná"><span class="rotulo">Next: OAB Paraná →</span></a>
+    </div>
+  </footer>
+
+</main>
+
+<div class="toque" aria-hidden="true">
+  <div class="toque-lado"><button data-tecla="esq">◀</button><button data-tecla="dir">▶</button></div>
+  <div class="toque-lado"><button data-tecla="baixo">▼</button><button data-tecla="pulo">▲</button></div>
+</div>
+
+<div id="painel" hidden></div>
+
+<script src="../js/sprites.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/efeitos.js"></script>
+<script src="../js/jogo.js"></script>
+</body>
+</html>

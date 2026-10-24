@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Angelo Rosa · Product Designer</title>
+<meta name="description" content="Angelo Rosa, Product Designer. A portfolio you can play: walk, jump and dive into pipes to open each case.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+<!-- chegou por um cano: tela preta até o jogo assumir (evita piscar a página no topo) -->
+<script>try{var s=JSON.parse(sessionStorage.getItem('pf-estado'));if(s&&s.viaCano)document.documentElement.classList.add('chegando')}catch(e){}</script>
+</head>
+<body data-fim>
+
+<!-- camada do jogo: cobre a janela, não captura cliques -->
+<canvas id="jogo" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="#home">ANGELO.ROSA</a>
+  <nav class="nav-links">
+    <a href="#about">About</a><a href="#process">How I work</a><a href="#work">Work</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="btn" data-acao="jogar">▶ Play</button>
+</header>
+
+<!--
+  Cada [data-fase] é uma fase. Cada [data-plat] é uma plataforma.
+  [data-pouso] é onde o personagem cai quando entra na fase (o buraco da fase anterior fica em cima dele).
+  a.cano[data-cano] leva para outra página.
+-->
+<main id="mundo">
+
+  <section class="fase heroi" id="home" data-fase data-nome="Start">
+    <div class="container">
+      <h1 class="titulo">
+        <span class="linha" data-plat data-pouso data-letras>ANGELO</span>
+        <span class="linha destaque" data-plat data-letras data-moedas="5">ROSA</span>
+      </h1>
+      <p class="lead" data-plat><strong>Product Designer</strong> creating digital experiences that connect people
+        and solve real problems. This portfolio is a platformer: hit <strong>Play</strong> and walk down the page,
+        or just scroll if you'd rather read.</p>
+      <div class="acoes" data-plat data-bugs="1">
+        <button class="btn grande" data-acao="jogar">▶ Play <kbd>Enter</kbd></button>
+        <a class="link" href="#about">Just reading ↓</a>
+      </div>
+      <ul class="controles" data-plat data-moedas="3">
+        <li><kbd>←</kbd><kbd>→</kbd> walk</li>
+        <li><kbd>space</kbd> jump, 2× in the air</li>
+        <li><kbd>↓</kbd> drop down / stomp in the air / enter pipes</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="fase" id="about" data-fase data-nome="Who I am">
+    <div class="container duas">
+      <div class="col">
+        <h2 data-plat data-pouso data-letras>Who I am</h2>
+        <p data-plat data-moedas="4">I'm a digital product designer with 7+ years creating people-centered solutions
+          aligned with business goals: research, prototyping, testing and usage metrics, from first concept to final delivery.</p>
+        <p data-plat data-bugs="1">I was born and raised in Maranhão, one of Brazil's most unequal states. That shaped how
+          I design: before proposing anything, I try to understand people's reality and cultural background.</p>
+        <p data-plat data-moedas="3">I started as a graphic designer, moved into UI in 2019 at one of São Paulo's largest
+          software houses, and went on to lead design on strategic projects for Carrefour, Vivo and Grupo DPSP.</p>
+      </div>
+      <div class="col fatos">
+        <div class="cartao" data-plat data-moedas="2"><dt>Experience</dt><dd>7+ years in product design</dd></div>
+        <div class="cartao" data-plat data-skill="UX Research"><dt>Background</dt><dd>Advertising · ESPM Rio de Janeiro</dd></div>
+        <div class="cartao" data-plat data-bugs="1"><dt>Led design for</dt><dd>Carrefour, Vivo, Grupo DPSP</dd></div>
+        <div class="cartao" data-plat data-moedas="3"><dt>Into</dt><dd>Generative AI, automation, open source</dd></div>
+      </div>
+    </div>
+    <!-- empresas: logos em pixel art (ferramentas/icones.py) -->
+    <div class="container empresas">
+      <p class="rotulo-secao" data-plat>Companies I've designed for</p>
+      <ul class="logos">
+        <li class="cartao" data-plat><img src="assets/logos/carrefour.png" alt="Carrefour" width="198" height="21"></li>
+        <li class="cartao" data-plat data-moedas="2"><img src="assets/logos/vivo.png" alt="Vivo" width="66" height="21"></li>
+        <li class="cartao" data-plat><img src="assets/logos/grupo-dpsp.png" alt="Grupo DPSP" width="177" height="21"></li>
+        <li class="cartao" data-plat><img src="assets/logos/insper.png" alt="Insper" width="126" height="21"></li>
+        <li class="cartao" data-plat><img src="assets/logos/oab-parana.png" alt="OAB Paraná" width="111" height="21"></li>
+        <li class="cartao" data-plat data-moedas="2"><img src="assets/logos/ademicon.png" alt="Ademicon" width="111" height="21"></li>
+        <li class="cartao" data-plat><img src="assets/logos/fiema.png" alt="FIEMA" width="81" height="21"></li>
+        <li class="cartao" data-plat><img src="assets/logos/platform-builders.png" alt="Platform Builders" width="105" height="45"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="fase" id="process" data-fase data-nome="How I work">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>How I work</h2>
+      <p class="lead" data-plat data-moedas="4">My job is to understand the depth of a challenge and make a digital
+        solution viable, working with stakeholders and developers from discovery to handoff.</p>
+      <div class="pilares">
+        <div class="cartao" data-plat data-skill="Design Thinking"><h3>Holistic vision</h3><p>Companies, tech teams, stakeholders and users all belong in the equation.</p></div>
+        <div class="cartao" data-plat data-moedas="2"><h3>User focus</h3><p>A product only succeeds if it solves a real pain, at every step.</p></div>
+        <div class="cartao" data-plat data-bugs="1"><h3>Learning from mistakes</h3><p>Errors are part of the work, and the base for improving the process.</p></div>
+        <div class="cartao" data-plat data-skill="AI agents"><h3>AI as a tool</h3><p>It raises the quality of the work. It is not a shortcut that replaces it.</p></div>
+      </div>
+      <!-- as etapas viram uma escada: um degrau por etapa -->
+      <ol class="degraus">
+        <li class="cartao" data-plat data-moedas="3"><b>01 · Discovery</b> Interviews with every stakeholder, recorded and fed into an AI knowledge base.</li>
+        <li class="cartao" data-plat data-skill="Miro"><b>02 · Wireframing</b> Screens, flows and journeys sketched in Miro and validated live with stakeholders.</li>
+        <li class="cartao" data-plat data-skill="Figma"><b>03 · Prototyping</b> A solid style guide and Atomic Design components in Figma, one page per user story.</li>
+        <li class="cartao" data-plat data-skill="Maze" data-bugs="1"><b>04 · Testing</b> Journeys tested in Maze. Catching errors in design is cheaper than refactoring code.</li>
+        <li class="cartao" data-plat data-moedas="3"><b>05 · Handoff</b> Side by side with developers: rationale, requirements and feasibility.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="fase" id="work" data-fase data-nome="Selected work">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Selected work</h2>
+      <p class="lead" data-plat data-moedas="4" data-bugs="1">Six cases from discovery to shipped product. Jump on a pipe and press ↓ to open one.</p>
+      <div class="grade">
+        <article class="cartao projeto" data-plat>
+          <a class="cano" href="work/oab-parana.html" data-plat data-cano aria-label="Open case: OAB Paraná"><span class="rotulo">Open case</span></a>
+          <img class="capa" src="assets/work/oab-parana/cover.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <span class="tag">Product Discovery · 2025</span><h3><a class="card-link" href="work/oab-parana.html">OAB Paraná</a></h3><p>Digital transformation discovery: 36 interviews to map how lawyers and staff really work.</p>
+        </article>
+        <article class="cartao projeto" data-plat>
+          <a class="cano" href="work/insper.html" data-plat data-cano aria-label="Open case: Insper"><span class="rotulo">Open case</span></a>
+          <img class="capa" src="assets/work/insper/cover.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <span class="tag">Discovery & Design · 2025</span><h3><a class="card-link" href="work/insper.html">Insper</a></h3><p>Turning scattered spreadsheets into one platform for courses, rooms and resources.</p>
+        </article>
+        <article class="cartao projeto" data-plat>
+          <a class="cano" href="work/carrefour-sva.html" data-plat data-cano aria-label="Open case: Carrefour SVA+"><span class="rotulo">Open case</span></a>
+          <img class="capa" src="assets/work/carrefour-sva/cover.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <span class="tag">UI / Product Design · 2023</span><h3><a class="card-link" href="work/carrefour-sva.html">Carrefour SVA+</a></h3><p>A price comparison feature for sales associates: 15,000+ comparisons in 3 months.</p>
+        </article>
+        <article class="cartao projeto" data-plat>
+          <a class="cano" href="work/dpsp-health.html" data-plat data-cano aria-label="Open case: Grupo DPSP"><span class="rotulo">Open case</span></a>
+          <img class="capa" src="assets/work/dpsp-health/cover.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <span class="tag">UI / Product Design · 2022</span><h3><a class="card-link" href="work/dpsp-health.html">Grupo DPSP</a></h3><p>A health services portal born in one sprint during the pandemic: 295,000+ services sold.</p>
+        </article>
+        <article class="cartao projeto" data-plat>
+          <a class="cano" href="work/synthetic-personas.html" data-plat data-cano aria-label="Open case: Synthetic Personas"><span class="rotulo">Open case</span></a>
+          <img class="capa" src="assets/work/synthetic-personas/cover.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <span class="tag">AI Solution · 2026</span><h3><a class="card-link" href="work/synthetic-personas.html">Synthetic Personas</a></h3><p>How I turned 11 interviews into AI agents that validate screens and journeys.</p>
+        </article>
+        <article class="cartao projeto" data-plat>
+          <a class="cano" href="work/ademicon-orbita.html" data-plat data-cano aria-label="Open case: Ademicon Orbita"><span class="rotulo">Open case</span></a>
+          <img class="capa" src="assets/work/ademicon-orbita/cover.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <span class="tag">UI / Product Design · 2026</span><h3><a class="card-link" href="work/ademicon-orbita.html">Ademicon Orbita</a></h3><p>A network management CRM designed and built as an MVP in five days.</p>
+        </article>
+        <article class="cartao projeto largo" data-plat>
+          <a class="cano" href="work/archive.html" data-plat data-cano aria-label="Open the archive"><span class="rotulo">Archive</span></a>
+          <span class="tag">Archive</span><h3><a class="card-link" href="work/archive.html">9 more projects</a></h3><p>FIEMA, Advoprazo, Impactos Positivos, DiFérias, Platform Builders and more.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="fase final" id="contact" data-fase data-nome="Contact">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Let's talk</h2>
+      <p class="lead" data-plat data-moedas="5">I usually reply fastest on LinkedIn. For something more formal, email works too.
+        Land on the floor of this stage to finish the game.</p>
+      <div class="contatos" data-plat data-bugs="1">
+        <a class="cartao" href="https://www.linkedin.com/in/angelowz/" target="_blank" rel="noopener"><img src="assets/icons/linkedin.png" alt="" width="48" height="48">LinkedIn</a>
+        <a class="cartao" href="https://wa.me/5541996202282" target="_blank" rel="noopener"><img src="assets/icons/whatsapp.png" alt="" width="48" height="48">WhatsApp</a>
+        <a class="cartao" href="mailto:angelorosa@gmail.com"><img src="assets/icons/email.png" alt="" width="48" height="48">Email</a>
+        <a class="cartao" href="https://github.com/foxbit/" target="_blank" rel="noopener"><img src="assets/icons/github.png" alt="" width="48" height="48">GitHub</a>
+        <a class="cartao" href="https://portifolio-arcreator.netlify.app/en/blog" target="_blank" rel="noopener"><img src="assets/icons/blog.png" alt="" width="48" height="48">Blog</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- botões de toque (aparecem só no celular, durante o jogo) -->
+<div class="toque" aria-hidden="true">
+  <div class="toque-lado"><button data-tecla="esq">◀</button><button data-tecla="dir">▶</button></div>
+  <div class="toque-lado"><button data-tecla="baixo">▼</button><button data-tecla="pulo">▲</button></div>
+</div>
+
+<div id="painel" hidden></div>
+
+<script src="js/sprites.js"></script>
+<script src="js/mundo.js"></script>
+<script src="js/efeitos.js"></script>
+<script src="js/jogo.js"></script>
+</body>
+</html>

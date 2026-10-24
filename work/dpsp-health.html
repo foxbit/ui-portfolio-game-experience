@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo DPSP · Angelo Rosa</title>
+<meta name="description" content="An online scheduling portal for health services, designed during the pandemic for the largest pharmacy chain in Latin America.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<!-- chegou por um cano: tela preta até o jogo assumir (evita piscar a página no topo) -->
+<script>try{var s=JSON.parse(sessionStorage.getItem('pf-estado'));if(s&&s.viaCano)document.documentElement.classList.add('chegando')}catch(e){}</script>
+</head>
+<body>
+
+<canvas id="jogo" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="../index.html">ANGELO.ROSA</a>
+  <nav class="nav-links">
+    <a href="../index.html#work">← All work</a>
+  </nav>
+  <button class="btn" data-acao="jogar">▶ Play</button>
+</header>
+
+<main id="mundo">
+
+  <section class="fase" data-fase data-nome="Grupo DPSP">
+    <div class="container">
+      <!-- cano de entrada: é por ele que o personagem chega, e ele leva de volta ao início -->
+      <div class="saida curta" data-plat>
+        <a class="cano" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">Home</span></a>
+      </div>
+      <h1 class="titulo-projeto" data-plat data-pouso data-letras>Grupo DPSP</h1>
+      <p class="lead" data-plat data-moedas="4">An online scheduling portal for health services, designed during the pandemic for the largest pharmacy chain in Latin America.</p>
+      <ul class="meta" data-plat data-bugs="1">
+        <li><b>Client</b>Grupo DPSP</li>
+        <li><b>Year</b>2022</li>
+        <li><b>Role</b>Lead Designer</li>
+      </ul>
+      <figure class="cartao midia capa" data-plat><img src="../assets/work/dpsp-health/cover.webp" alt="Pixel art scene for the Grupo DPSP: Health Portal Design case" width="1280" height="720" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Challenge">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Challenge</h2>
+      <p data-plat data-moedas="3">With Covid-19, DPSP had to launch, in record time, online scheduling for its main services: Covid and blood tests, blood pressure checks and vaccination.</p>
+      <p data-plat data-bugs="1">As Lead Designer, the first goal was an MVP built in a single sprint, to validate whether people would use these services digitally at all.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/dpsp-health/challenge.webp" alt="The DPSP health dashboard on a laptop, with the headline This is your new health dashboard" width="1200" height="732" loading="lazy" decoding="async"><figcaption>The new health dashboard on desktop</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Solution">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras data-skill="MVP">Solution</h2>
+      <p data-plat data-moedas="3">The MVP was an immediate success and demand grew exponentially, so the group set up a dedicated squad for the platform.</p>
+      <p data-plat data-bugs="1">I led the evolution roadmap, coordinating UI and UX designers and front and back-end developers, growing a simple form into a national platform for registering, scheduling and managing health services.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/dpsp-health/solution.webp" alt="Five mobile screens of the health portal: dashboard, notifications, service search, scheduling calendar and store map" width="1280" height="765" loading="lazy" decoding="async"><figcaption>Mobile journeys: services, notifications, scheduling and store finder</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Impact">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Impact</h2>
+      <div class="numeros">
+        <div class="cartao" data-plat data-moedas="2"><strong>1 sprint</strong><span>from idea to MVP</span></div>
+        <div class="cartao" data-plat><strong>295,000+</strong><span>services sold</span></div>
+        <div class="cartao" data-plat data-moedas="2"><strong>~R$7.5M</strong><span>revenue in just over a year</span></div>
+      </div>
+      <p data-plat data-bugs="1">The portal became a strategic channel for the chain, and a digital habit that outlived the most critical phase of the pandemic.</p>
+    </div>
+  </section>
+
+  <footer class="fase rodape" data-fase data-nome="Exit">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>What next?</h2>
+      <p data-plat data-moedas="3">Jump on a pipe to keep exploring, or <a class="externo" href="https://portifolio-arcreator.netlify.app/en/portfolio/health-portal-dpsp-group" target="_blank" rel="noopener">read the full case ↗</a>.</p>
+    </div>
+    <!-- os canos de saída ficam em cima do chão final: quem cai até o fundo sempre tem por onde sair -->
+    <div class="saida no-chao">
+      <a class="cano fixo" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">← Home</span></a>
+      <a class="cano fixo segundo" href="synthetic-personas.html" data-plat data-cano aria-label="Next case: Synthetic Personas"><span class="rotulo">Next: Synthetic Personas →</span></a>
+    </div>
+  </footer>
+
+</main>
+
+<div class="toque" aria-hidden="true">
+  <div class="toque-lado"><button data-tecla="esq">◀</button><button data-tecla="dir">▶</button></div>
+  <div class="toque-lado"><button data-tecla="baixo">▼</button><button data-tecla="pulo">▲</button></div>
+</div>
+
+<div id="painel" hidden></div>
+
+<script src="../js/sprites.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/efeitos.js"></script>
+<script src="../js/jogo.js"></script>
+</body>
+</html>

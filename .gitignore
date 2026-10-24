@@ -1,0 +1,10 @@
+# configuração local do Claude Code (servidor de preview)
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+
+# sistema
+.DS_Store
+Thumbs.db

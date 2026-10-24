@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insper · Angelo Rosa</title>
+<meta name="description" content="Turning manual processes and fragmented data into a single, strategic view of courses, rooms and resources for one of Brazil&#x27;s leading business schools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<!-- chegou por um cano: tela preta até o jogo assumir (evita piscar a página no topo) -->
+<script>try{var s=JSON.parse(sessionStorage.getItem('pf-estado'));if(s&&s.viaCano)document.documentElement.classList.add('chegando')}catch(e){}</script>
+</head>
+<body>
+
+<canvas id="jogo" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="../index.html">ANGELO.ROSA</a>
+  <nav class="nav-links">
+    <a href="../index.html#work">← All work</a>
+  </nav>
+  <button class="btn" data-acao="jogar">▶ Play</button>
+</header>
+
+<main id="mundo">
+
+  <section class="fase" data-fase data-nome="Insper">
+    <div class="container">
+      <!-- cano de entrada: é por ele que o personagem chega, e ele leva de volta ao início -->
+      <div class="saida curta" data-plat>
+        <a class="cano" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">Home</span></a>
+      </div>
+      <h1 class="titulo-projeto" data-plat data-pouso data-letras>Insper</h1>
+      <p class="lead" data-plat data-moedas="4">Turning manual processes and fragmented data into a single, strategic view of courses, rooms and resources for one of Brazil&#x27;s leading business schools.</p>
+      <ul class="meta" data-plat data-bugs="1">
+        <li><b>Client</b>Insper Executive Education</li>
+        <li><b>Year</b>2025</li>
+        <li><b>Type</b>Discovery &amp; Design</li>
+      </ul>
+      <figure class="cartao midia capa" data-plat><img src="../assets/work/insper/cover.webp" alt="Pixel art scene for the Insper: Academic Platform Discovery and Design case" width="1280" height="720" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Challenge">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Challenge</h2>
+      <p data-plat data-moedas="3">Insper grew exponentially, but its academic operations stayed analog: critical data scattered across dozens of disconnected spreadsheets, causing daily inconsistencies and rework.</p>
+      <blockquote class="citacao" data-plat>“We need a management view that lets us understand not only what happened, but what is going to happen in our operation.”<cite>Silvio Abrahão Laban Neto, Area Director</cite></blockquote>
+      <figure class="cartao midia" data-plat><img src="../assets/work/insper/persona.webp" alt="Persona card for Rina Xavier, Head of Executive Education, with her goals, pain points and a quote" width="960" height="610" loading="lazy" decoding="async"><figcaption>One of the three personas: Rina Xavier, Head of Executive Education</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Process">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras data-skill="AI-assisted design">Process</h2>
+      <p data-plat data-moedas="3">High-performing teams were spending hours on repetitive allocation tasks and manual checks, while managers had no real-time metrics to decide about courses and resources.</p>
+      <p data-plat data-bugs="1">After a four-week discovery with the key players of four departments, I designed a web application that centralizes course, room and resource management, using an AI-assisted design approach.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/insper/modules.webp" alt="The four MVP modules: course management, resource allocation, financial and performance, and stakeholder portal" width="968" height="528" loading="lazy" decoding="async"><figcaption>The MVP, defined from the pain points: four modules</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Results">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Results</h2>
+      <div class="numeros">
+        <div class="cartao" data-plat data-moedas="2"><strong>5</strong><span>key stakeholders interviewed</span></div>
+        <div class="cartao" data-plat><strong>4</strong><span>departments impacted</span></div>
+        <div class="cartao" data-plat data-moedas="2"><strong>4 weeks</strong><span>of discovery</span></div>
+        <div class="cartao" data-plat><strong>78M</strong><span>annual revenue target</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fase rodape" data-fase data-nome="Exit">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>What next?</h2>
+      <p data-plat data-moedas="3">Jump on a pipe to keep exploring, or <a class="externo" href="https://discovery-insper.netlify.app/" target="_blank" rel="noopener">read the full case ↗</a>.</p>
+    </div>
+    <!-- os canos de saída ficam em cima do chão final: quem cai até o fundo sempre tem por onde sair -->
+    <div class="saida no-chao">
+      <a class="cano fixo" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">← Home</span></a>
+      <a class="cano fixo segundo" href="carrefour-sva.html" data-plat data-cano aria-label="Next case: Carrefour SVA+"><span class="rotulo">Next: Carrefour SVA+ →</span></a>
+    </div>
+  </footer>
+
+</main>
+
+<div class="toque" aria-hidden="true">
+  <div class="toque-lado"><button data-tecla="esq">◀</button><button data-tecla="dir">▶</button></div>
+  <div class="toque-lado"><button data-tecla="baixo">▼</button><button data-tecla="pulo">▲</button></div>
+</div>
+
+<div id="painel" hidden></div>
+
+<script src="../js/sprites.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/efeitos.js"></script>
+<script src="../js/jogo.js"></script>
+</body>
+</html>

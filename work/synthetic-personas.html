@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Synthetic Personas · Angelo Rosa</title>
+<meta name="description" content="Eleven in-depth interviews became AI agents that represent the personas and validate features, journeys and screens without reaching out to users again.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<!-- chegou por um cano: tela preta até o jogo assumir (evita piscar a página no topo) -->
+<script>try{var s=JSON.parse(sessionStorage.getItem('pf-estado'));if(s&&s.viaCano)document.documentElement.classList.add('chegando')}catch(e){}</script>
+</head>
+<body>
+
+<canvas id="jogo" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="../index.html">ANGELO.ROSA</a>
+  <nav class="nav-links">
+    <a href="../index.html#work">← All work</a>
+  </nav>
+  <button class="btn" data-acao="jogar">▶ Play</button>
+</header>
+
+<main id="mundo">
+
+  <section class="fase" data-fase data-nome="Synthetic Personas">
+    <div class="container">
+      <!-- cano de entrada: é por ele que o personagem chega, e ele leva de volta ao início -->
+      <div class="saida curta" data-plat>
+        <a class="cano" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">Home</span></a>
+      </div>
+      <h1 class="titulo-projeto" data-plat data-pouso data-letras>Synthetic Personas</h1>
+      <p class="lead" data-plat data-moedas="4">Eleven in-depth interviews became AI agents that represent the personas and validate features, journeys and screens without reaching out to users again.</p>
+      <ul class="meta" data-plat data-bugs="1">
+        <li><b>Client</b>PP Concursos</li>
+        <li><b>Year</b>2026</li>
+        <li><b>Type</b>AI Solution</li>
+      </ul>
+      <figure class="cartao midia capa" data-plat><img src="../assets/work/synthetic-personas/cover.webp" alt="Pixel art scene for the Synthetic Personas: How I Turned 11 Interviews into AI Agents case" width="1280" height="720" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Beyond the prompt">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Beyond the prompt</h2>
+      <p data-plat data-moedas="3">Prompting handles isolated tasks, not process. When a problem depends on accumulated context, asking again does not scale.</p>
+      <p data-plat data-bugs="1">So I treated the persona as a system: raw data, structured memory, a query tool and a behavior contract that defines how it thinks and speaks.</p>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="The method">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras data-skill="pgvector">The method</h2>
+      <p data-plat data-moedas="3">Each 60 to 75 minute interview was cleaned, split into granular blocks, rewritten in the first person, tagged (pain point, mental model, tools, goal) and stored as JSON linked to its source. Never summarized away.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/synthetic-personas/pipeline.webp" alt="Diagram of the path: from the 11 interviews to treatment, to the evidence base and to vectorization" width="1280" height="720" loading="lazy" decoding="async"><figcaption>From 11 interviews to an evidence base ready to vectorize</figcaption></figure>
+      <p data-plat data-moedas="3">Three archetypes emerged: Mariana, the organized candidate; Rafael, the disorganized beginner; Camila, the persistent tightrope walker. Each one became an agent with its own vector base, a personality contract and tools to review product artifacts.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/synthetic-personas/architecture.webp" alt="Diagram of the persona agent architecture: vector base, system prompt and tools around the agent" width="1280" height="720" loading="lazy" decoding="async"><figcaption>The architecture of a persona agent</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Limits">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Limits</h2>
+      <figure class="cartao midia" data-plat><img src="../assets/work/synthetic-personas/validation.webp" alt="Pen and ink illustration of three persona cards with speech bubbles assessing a wireframe screen before it goes to the user" width="1280" height="720" loading="lazy" decoding="async"><figcaption>Persona agents reviewing a screen before it reaches real users</figcaption></figure>
+      <div class="numeros">
+        <div class="cartao" data-plat data-moedas="2"><strong>11</strong><span>in-depth interviews</span></div>
+        <div class="cartao" data-plat><strong>3</strong><span>persona agents</span></div>
+        <div class="cartao" data-plat data-moedas="2"><strong>60–75 min</strong><span>per interview, kept as memory</span></div>
+      </div>
+      <p data-plat data-moedas="3">A synthetic persona only answers from what is already in the data. Outputs are checked against the transcripts, and archetypes test hypotheses. They never replace talking to real people in high-stakes decisions.</p>
+    </div>
+  </section>
+
+  <footer class="fase rodape" data-fase data-nome="Exit">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>What next?</h2>
+      <p data-plat data-moedas="3">Jump on a pipe to keep exploring, or <a class="externo" href="https://portifolio-arcreator.netlify.app/en/portfolio/synthetic-personas-interviews-ai-agents" target="_blank" rel="noopener">read the full case ↗</a>.</p>
+    </div>
+    <!-- os canos de saída ficam em cima do chão final: quem cai até o fundo sempre tem por onde sair -->
+    <div class="saida no-chao">
+      <a class="cano fixo" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">← Home</span></a>
+      <a class="cano fixo segundo" href="ademicon-orbita.html" data-plat data-cano aria-label="Next case: Ademicon Orbita"><span class="rotulo">Next: Ademicon Orbita →</span></a>
+    </div>
+  </footer>
+
+</main>
+
+<div class="toque" aria-hidden="true">
+  <div class="toque-lado"><button data-tecla="esq">◀</button><button data-tecla="dir">▶</button></div>
+  <div class="toque-lado"><button data-tecla="baixo">▼</button><button data-tecla="pulo">▲</button></div>
+</div>
+
+<div id="painel" hidden></div>
+
+<script src="../js/sprites.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/efeitos.js"></script>
+<script src="../js/jogo.js"></script>
+</body>
+</html>

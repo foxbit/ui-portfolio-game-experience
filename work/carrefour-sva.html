@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrefour SVA+ · Angelo Rosa</title>
+<meta name="description" content="A comparison feature inside the SVA+ sales app that lets Carrefour associates put up to three products side by side, right in front of the customer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/estilo.css">
+<!-- chegou por um cano: tela preta até o jogo assumir (evita piscar a página no topo) -->
+<script>try{var s=JSON.parse(sessionStorage.getItem('pf-estado'));if(s&&s.viaCano)document.documentElement.classList.add('chegando')}catch(e){}</script>
+</head>
+<body>
+
+<canvas id="jogo" aria-hidden="true"></canvas>
+
+<header class="topo">
+  <a class="marca" href="../index.html">ANGELO.ROSA</a>
+  <nav class="nav-links">
+    <a href="../index.html#work">← All work</a>
+  </nav>
+  <button class="btn" data-acao="jogar">▶ Play</button>
+</header>
+
+<main id="mundo">
+
+  <section class="fase" data-fase data-nome="Carrefour SVA+">
+    <div class="container">
+      <!-- cano de entrada: é por ele que o personagem chega, e ele leva de volta ao início -->
+      <div class="saida curta" data-plat>
+        <a class="cano" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">Home</span></a>
+      </div>
+      <h1 class="titulo-projeto" data-plat data-pouso data-letras>Carrefour SVA+</h1>
+      <p class="lead" data-plat data-moedas="4">A comparison feature inside the SVA+ sales app that lets Carrefour associates put up to three products side by side, right in front of the customer.</p>
+      <ul class="meta" data-plat data-bugs="1">
+        <li><b>Client</b>Carrefour Brasil</li>
+        <li><b>Year</b>2023</li>
+        <li><b>Type</b>UI / Product Design</li>
+      </ul>
+      <figure class="cartao midia capa" data-plat><img src="../assets/work/carrefour-sva/cover.webp" alt="Pixel art scene for the Carrefour: SVA+ Price Comparison Design case" width="1280" height="720" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Challenge">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Challenge</h2>
+      <p data-plat data-moedas="3">SVA+ lets sales associates run electronics consultations on the corporate smartphone, on the store floor.</p>
+      <p data-plat data-bugs="1">The requirement: pick up to three products from the same category and read their specs in parallel columns, helping the customer decide at the moment of sale.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/carrefour-sva/challenge.webp" alt="Comparison flow: products checked in the list dock in a footer bar, then open a side-by-side table" width="1280" height="712" loading="lazy" decoding="async"><figcaption>The comparison flow, from product list to side-by-side table</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Solution">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras data-skill="Maze">Solution</h2>
+      <p data-plat data-moedas="3">I mapped every product category and its relevant specs, then benchmarked how Amazon, Buscapé and Mercado Livre structure their comparison tools.</p>
+      <p data-plat data-bugs="1">From a product page, the associate taps compare and the item docks in a fixed footer that follows the navigation. With two or more items, Compare opens a table with one column per product, scrollable in both directions.</p>
+      <figure class="cartao midia" data-plat><img src="../assets/work/carrefour-sva/solution.webp" alt="The comparison footer in three stages: one product selected, two products with Compare enabled, three products" width="1136" height="679" loading="lazy" decoding="async"><figcaption>The footer&#x27;s three selection stages: Compare unlocks at two products</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="fase" data-fase data-nome="Testing &amp; impact">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>Testing &amp; impact</h2>
+      <p data-plat data-moedas="3">We tested the prototypes in Maze with 10 associates of different profiles, on the same phone they use to sell. Everyone finished on time; the footer and the remove button needed more emphasis, and we fixed both.</p>
+      <div class="galeria">
+        <figure class="cartao midia" data-plat><img src="../assets/work/carrefour-sva/testing-2.webp" alt="Heat maps from the Maze tests over the product list and comparison footer" width="1280" height="761" loading="lazy" decoding="async"><figcaption>Heat map analysis from the Maze tests</figcaption></figure>
+        <figure class="cartao midia retrato" data-plat><video src="../assets/work/carrefour-sva/testing.mp4" poster="../assets/work/carrefour-sva/testing-poster.webp" width="248" height="382" autoplay muted loop playsinline preload="metadata" aria-label="A sales associate using the comparison feature on a phone in the store"></video><figcaption>The feature in use on the store floor</figcaption></figure>
+      </div>
+      <div class="numeros">
+        <div class="cartao" data-plat data-moedas="2"><strong>10</strong><span>associates in user tests</span></div>
+        <div class="cartao" data-plat><strong>3</strong><span>products side by side</span></div>
+        <div class="cartao" data-plat data-moedas="2"><strong>15,000+</strong><span>comparisons in the first 3 months</span></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="fase rodape" data-fase data-nome="Exit">
+    <div class="container">
+      <h2 data-plat data-pouso data-letras>What next?</h2>
+      <p data-plat data-moedas="3">Jump on a pipe to keep exploring, or <a class="externo" href="https://portifolio-arcreator.netlify.app/en/portfolio/sva-price-comparison" target="_blank" rel="noopener">read the full case ↗</a>.</p>
+    </div>
+    <!-- os canos de saída ficam em cima do chão final: quem cai até o fundo sempre tem por onde sair -->
+    <div class="saida no-chao">
+      <a class="cano fixo" href="../index.html" data-plat data-cano aria-label="Back home"><span class="rotulo">← Home</span></a>
+      <a class="cano fixo segundo" href="dpsp-health.html" data-plat data-cano aria-label="Next case: Grupo DPSP"><span class="rotulo">Next: Grupo DPSP →</span></a>
+    </div>
+  </footer>
+
+</main>
+
+<div class="toque" aria-hidden="true">
+  <div class="toque-lado"><button data-tecla="esq">◀</button><button data-tecla="dir">▶</button></div>
+  <div class="toque-lado"><button data-tecla="baixo">▼</button><button data-tecla="pulo">▲</button></div>
+</div>
+
+<div id="painel" hidden></div>
+
+<script src="../js/sprites.js"></script>
+<script src="../js/mundo.js"></script>
+<script src="../js/efeitos.js"></script>
+<script src="../js/jogo.js"></script>
+</body>
+</html>
